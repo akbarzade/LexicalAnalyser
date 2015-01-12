@@ -1,0 +1,13 @@
+﻿Project of :
+	Compiler Design Principle
+
+Course Professor :
+	Dr. AR Ghavami
+
+Developer's :
+	1.
+	Amir Hooshang Akbarzade
+		akbarzade@outlook.com
+
+	2.
+	Hamed Javaheri

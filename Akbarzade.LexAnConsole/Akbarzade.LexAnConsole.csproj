@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3594BAA9-1341-4270-B9B5-0665A4859911}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Akbarzade.LexAnConsole</RootNamespace>
+    <AssemblyName>Akbarzade.LexAnConsole</AssemblyName>
+    <TargetFrameworkVersion>v4.5.3</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GLexerLib">
+      <HintPath>..\..\GLexerLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ViperReflectionLib">
+      <HintPath>..\..\ViperReflectionLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeGen\Assign.cs" />
+    <Compile Include="CodeGen\AssignPointerDereference.cs" />
+    <Compile Include="CodeGen\CompileLine.cs" />
+    <Compile Include="CodeGen\CodeGen.cs" />
+    <Compile Include="CodeGen\CodeGenException.cs" />
+    <Compile Include="CodeGen\CompileBlock.cs" />
+    <Compile Include="CodeGen\CompileIndexAssign.cs" />
+    <Compile Include="CodeGen\CompileMethod.cs" />
+    <Compile Include="CodeGen\ControlFlow\CallFunction.cs" />
+    <Compile Include="CodeGen\ControlFlow\CompileFor.cs" />
+    <Compile Include="CodeGen\ControlFlow\CompileDo.cs" />
+    <Compile Include="CodeGen\ControlFlow\CompileIf.cs" />
+    <Compile Include="CodeGen\ControlFlow\CompileReturn.cs" />
+    <Compile Include="CodeGen\ControlFlow\CompileWhile.cs" />
+    <Compile Include="CodeGen\Declare.cs" />
+    <Compile Include="CodeGen\Expressions\CompileStringExpression.cs" />
+    <Compile Include="CodeGen\Expressions\CompileIntExpression.cs" />
+    <Compile Include="CodeGen\Helper.cs" />
+    <Compile Include="CodeGen\SymbolHelper.cs" />
+    <Compile Include="CodeGen\Vasm.cs" />
+    <Compile Include="Language\BinOps.cs" />
+    <Compile Include="Language\Block.cs" />
+    <Compile Include="Language\Cast.cs" />
+    <Compile Include="Language\ControlFlow\DoStatement.cs" />
+    <Compile Include="Language\ControlFlow\ForStatement.cs" />
+    <Compile Include="Language\ControlFlow\FunctionCall.cs" />
+    <Compile Include="Language\ControlFlow\IfStatement.cs" />
+    <Compile Include="Language\ControlFlow\Return.cs" />
+    <Compile Include="Language\Declaration.cs" />
+    <Compile Include="Language\Expression.cs" />
+    <Compile Include="Language\IndexAccessor.cs" />
+    <Compile Include="Language\InlineIL.cs" />
+    <Compile Include="Language\Literals.cs" />
+    <Compile Include="Language\Method.cs" />
+    <Compile Include="Language\PointerDereference.cs" />
+    <Compile Include="Language\PointerReference.cs" />
+    <Compile Include="Language\SymbolReference.cs" />
+    <Compile Include="Language\SyntaxNode.cs" />
+    <Compile Include="Language\ControlFlow\WhileStatement.cs" />
+    <Compile Include="Language\Typedef.cs" />
+    <Compile Include="Lexer\Lexer.cs" />
+    <Compile Include="Parser\CheckSemi.cs" />
+    <Compile Include="Parser\ControlFlow\ParseWhile.cs" />
+    <Compile Include="Parser\ControlFlow\ParseCall.cs" />
+    <Compile Include="Parser\ControlFlow\ParseDo.cs" />
+    <Compile Include="Parser\ControlFlow\ParseFor.cs" />
+    <Compile Include="Parser\ControlFlow\ParseIf.cs" />
+    <Compile Include="Parser\ParseAssign.cs" />
+    <Compile Include="Parser\ParseBlock.cs" />
+    <Compile Include="Parser\ParseDeclaration.cs" />
+    <Compile Include="Parser\ParseExpression.cs" />
+    <Compile Include="Parser\ParseIndexSet.cs" />
+    <Compile Include="Parser\ParseLine.cs" />
+    <Compile Include="Parser\ParseMethod.cs" />
+    <Compile Include="Parser\Parser.cs" />
+    <Compile Include="Parser\ParserException.cs" />
+    <Compile Include="Parser\Preprocessor.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Howto.txt" />
+    <Content Include="ProjectInfo.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

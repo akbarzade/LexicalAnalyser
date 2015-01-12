@@ -1,0 +1,86 @@
+﻿Make an example test file beside the compiled project file named : "Akbarzade.LexAnConsole.exe"
+
+use the command prompt to pass the test file as an argument of the main method like followed examples ,
+before that change the path to the project exported executable file in the "bin" directory.
+in command prompt insert following command and accept that
+
+c:\>cd [SolutionDirectory-PATH]\Akbarzade.LexAnConsole\bin\[Release|Debug]\
+
+to run the app and test your sample cpp program use following examples with the followed test.txt content :
+----------------------------------------------------
+1.
+CONTENT : 
+void main()
+{
+}
+COMMAND :
+Akbarzade.LexAnConsole.exe test.txt
+----------------------------------------------------
+1.
+CONTENT : 
+void main(string arg1)
+{
+}
+COMMAND :
+Akbarzade.LexAnConsole.exe test.txt
+----------------------------------------------------
+1.
+CONTENT : 
+void main(string arg1, string arg2)
+{
+}
+COMMAND :
+Akbarzade.LexAnConsole.exe test.txt
+----------------------------------------------------
+1.
+CONTENT : 
+void main(string arg1, string arg2)
+{
+string aString
+}
+COMMAND :
+Akbarzade.LexAnConsole.exe test.txt
+----------------------------------------------------
+1.
+CONTENT : 
+void main()
+{
+	int aInt = 3 + 4;
+	string aString; string anotherString;
+}
+COMMAND :
+Akbarzade.LexAnConsole.exe test.txt
+----------------------------------------------------
+1.
+CONTENT : 
+void main(string arg1, string arg2)
+{
+	if(1 + 4 == 3 + 4)
+	{
+	
+	}
+	someMethod("Hello, World!");
+	int aInt = 3 + 4;
+	string aString; string anotherString;
+}
+COMMAND :
+Akbarzade.LexAnConsole.exe test.txt
+----------------------------------------------------
+1.
+CONTENT : 
+
+COMMAND :
+Akbarzade.LexAnConsole.exe test.txt
+----------------------------------------------------
+1.
+CONTENT : 
+
+COMMAND :
+Akbarzade.LexAnConsole.exe test.txt
+----------------------------------------------------
+1.
+CONTENT : 
+
+COMMAND :
+Akbarzade.LexAnConsole.exe test.txt
+----------------------------------------------------
